@@ -5,33 +5,21 @@ function formatString(input: string, toUpper?: boolean): string {
         return input.toUpperCase()
     }
 }
-// console.log(formatString("Hello",false));         
-// console.log(formatString("Hello", true));;  
-// console.log(formatString("Hello", false));  
+
 
 
 function filterByRating(items: { title: string; rating: number }[]): { title: string; rating: number }[] {
     return items.filter(item => item.rating > 4)
 }
 
-// const books = [
-//     { title: "Book A", rating: 4.5 },
-//     { title: "Book B", rating: 3.2 },
-//     { title: "Book C", rating: 5.0 }
-// ];
 
-// const result = filterByRating(books);
-// Output: [ { title: "Book A", rating: 4.5 }, { title: "Book C", rating: 5.0 } ]
-// console.log(result);
 
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
     return ([] as T[]).concat(...arrays);
 }
 
-// const result1 = concatenateArrays(["a", "b"], ["c"]);       // Output: ["a", "b", "c"]
-// const result2 = concatenateArrays([1, 2], [3, 4], [5]);     // Output: [1, 2, 3, 4, 5]
-// console.log(result1,result2);
+
 
 
 class Vehicle {
@@ -60,9 +48,7 @@ class Car extends Vehicle {
     }
 }
 
-// const myCar = new Car("Toyota", 2020, "Corolla");
-// console.log(myCar.getInfo());   // Output: "Make: Toyota, Year: 2020"
-// console.log(myCar.getModel());  // Output: "Model: Corolla"
+
 
 
 
@@ -76,8 +62,7 @@ function processValue(value: string | number): number {
 
 }
 
-// console.log(processValue("hello"));
-// console.log(processValue(10)    );
+
 
 
 interface Product {
@@ -93,14 +78,6 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
     )
 }
 
-
-// const products = [
-//     { name: "Pen", price: 10 },
-//     { name: "Notebook", price: 25 },
-//     { name: "Bag", price: 50 }
-//   ];
-
-//   console.log(getMostExpensiveProduct(products));
 
 
 enum Day {
@@ -121,12 +98,11 @@ function getDayType(day: Day): string {
 }
 
 
-// console.log(getDayType(Day.Monday));
-// console.log(getDayType(Day.Sunday));
+
 
 async function squareAsync(n: number): Promise<number> {
     if (n < 0) {
-        throw new Error(' Nagitive number are not allowed')
+        throw new Error(' Negative number are not allowed')
     }
     return new Promise((resolve) => {
         setTimeout(() => {
@@ -135,5 +111,3 @@ async function squareAsync(n: number): Promise<number> {
     })
 }
 
-squareAsync(-4).then(console.log);         // Output after 1s: 16
-squareAsync(-3).catch(console.error);    // Output: Error: Negative number not allowed
