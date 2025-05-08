@@ -25,3 +25,10 @@ function filterByRating(items: { title: string; rating: number }[]): { title: st
 // console.log(result);
 
 
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+    return ([] as T[]).concat(...arrays);
+}
+
+// const result1 = concatenateArrays(["a", "b"], ["c"]);       // Output: ["a", "b", "c"]
+// const result2 = concatenateArrays([1, 2], [3, 4], [5]);     // Output: [1, 2, 3, 4, 5]
+// console.log(result1,result2);
