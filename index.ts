@@ -32,3 +32,34 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
 // const result1 = concatenateArrays(["a", "b"], ["c"]);       // Output: ["a", "b", "c"]
 // const result2 = concatenateArrays([1, 2], [3, 4], [5]);     // Output: [1, 2, 3, 4, 5]
 // console.log(result1,result2);
+
+
+class Vehicle {
+    private _make: string;
+    year: number;
+
+    constructor(_make: string, year: number) {
+        this._make = _make
+        this.year = year
+    }
+    getInfo() {
+        return `Make: ${this._make}, Year: ${this.year}`
+    }
+
+}
+
+class Car extends Vehicle {
+    private _modal: string;
+
+    constructor(_make: string, year: number, _modal: string) {
+        super(_make, year)
+        this._modal = _modal
+    }
+    getModel() {
+        return `Model: ${this._modal}`
+    }
+}
+
+// const myCar = new Car("Toyota", 2020, "Corolla");
+// console.log(myCar.getInfo());   // Output: "Make: Toyota, Year: 2020"
+// console.log(myCar.getModel());  // Output: "Model: Corolla"
